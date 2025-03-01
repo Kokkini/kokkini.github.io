@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Future of Data Science: Trends to Watch in 2025
+title: "The Future of Data Science: Trends to Watch in 2025"
 ---
 
 Data science continues to evolve at a rapid pace, driven by advancements in artificial intelligence, machine learning, and big data technologies. As we move into 2025, new trends are shaping the industry and redefining how businesses and researchers leverage data. In this blog post, we will explore some of the key trends that will define the future of data science.
@@ -40,6 +40,3 @@ Machine learning operations (MLOps) is becoming a fundamental part of AI deploym
 Conclusion
 
 Data science is at an exciting crossroads where technological advancements are making AI more powerful, accessible, and responsible. The trends outlined above will shape the future of data-driven decision-making in 2025 and beyond. Businesses and professionals who stay ahead of these trends will be well-positioned to harness the full potential of data science in the years to come.
-![_config.yml]({{ site.baseurl }}/images/config.png)
-
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
