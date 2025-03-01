@@ -3,8 +3,6 @@ layout: post
 title: "Causal Inference: Moving Beyond Correlation in Data Science"
 ---
 
-# Causal Inference: Moving Beyond Correlation in Data Science
-
 ## Introduction
 
 In data science, one of the most common pitfalls is mistaking correlation for causation. While machine learning models excel at finding patterns in data, they often fail to distinguish between mere associations and true causal relationships. This distinction is crucial in many fields, from healthcare to finance, where making the right decision based on data can have significant real-world consequences.
