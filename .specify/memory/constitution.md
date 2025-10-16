@@ -1,50 +1,66 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+- Version change: N/A → 1.0.0
+- Modified principles: Placeholders replaced with concrete principles
+- Added sections: Section 2 (Additional Constraints), Section 3 (Development Workflow), Governance details
+- Removed sections: None
+- Templates requiring updates:
+  - ⚠ .specify/templates/plan-template.md (not found)
+  - ⚠ .specify/templates/spec-template.md (not found)
+  - ⚠ .specify/templates/tasks-template.md (not found)
+  - ⚠ .specify/templates/commands/*.md (not found)
+- Follow-up TODOs:
+  - TODO(RATIFICATION_DATE): Original adoption date unknown; set when decided
+-->
+
+# Kokkini Personal Website Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Performance and Accessibility First
+The site MUST load fast and meet baseline accessibility. Targets: Lighthouse ≥ 90
+for Performance, Accessibility, Best Practices. Use semantic HTML, sufficient
+color contrast, keyboard navigation, and descriptive alt text. Optimize assets
+(images, fonts, icons) with modern formats and compression.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Content Clarity and Simplicity
+The landing page MUST communicate purpose and key actions in under five seconds.
+Copy is concise, free of jargon, and organized with clear hierarchy. Avoid
+unnecessary animations or libraries that do not add user value.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Responsive, Cross-Browser Design
+Layouts MUST fluidly adapt from 320px to desktop widths. Support the latest two
+major versions of modern browsers. Critical content remains readable without
+JavaScript. Use progressive enhancement.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Zero-Backend, Static Delivery Discipline
+No server code. The site is built as static assets (HTML/CSS/JS) and deployed on
+static hosting (e.g., GitHub Pages). Any data usage is read-only and client-side
+fetch from public endpoints with graceful degradation and no PII storage.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Privacy and Minimal Analytics
+No tracking cookies or third-party trackers by default. If analytics are used,
+they MUST be privacy-respecting, cookie-less, and anonymized. No collection of
+personal data or contact information without explicit user consent and a clear
+purpose.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Additional Constraints
+Technology: Vanilla HTML/CSS/JS preferred. Introduce a framework only when it
+materially reduces complexity. Use modern CSS (flexbox/grid), system fonts or a
+single performant web font, SVG for icons, and precompressed images (WebP/AVIF)
+with fallbacks. No bundler is required unless complexity grows; if used, ensure
+deterministic builds and small output.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development Workflow
+Changes occur via small commits and Pull Requests. Each change MUST be validated
+locally with Lighthouse and an accessibility checker. Run a link checker before
+deploy. Version content and assets via git; use descriptive commit messages.
+Deployment to GitHub Pages happens on merge to the default branch.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution supersedes other conventions for this project. Amendments
+require a Pull Request that documents rationale, expected impact, a migration or
+rollout note, and an updated version. Compliance is reviewed during PRs using
+the stated targets and rules in Core Principles and Workflow.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): set original adoption date | **Last Amended**: 2025-10-16
