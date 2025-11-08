@@ -1,12 +1,15 @@
-/* CSS Reset and base variables */
+/* CSS Reset and base variables - Neumorphism Theme */
 :root {
-  --bg: #0f0f12;
-  --fg: #e8eaf0;
-  --muted: #a9adba;
+  --bg: #e0e5ec;
+  --fg: #2c3e50;
+  --muted: #5f6c7b;
   --accent: #ff476f;
-  --card: #1a1b21;
-  --card-border: #2a2c36;
+  --card: #e0e5ec;
   --focus: #7cc0ff;
+  --shadow-light: #ffffff;
+  --shadow-dark: #a3b1c6;
+  --shadow-inset-light: rgba(255, 255, 255, 0.7);
+  --shadow-inset-dark: rgba(163, 177, 198, 0.5);
 }
 
 * { box-sizing: border-box; }
@@ -29,25 +32,53 @@ body {
 .skip-link:focus {
   left: 1rem;
   top: 1rem;
-  background: var(--focus);
-  color: #000;
+  background: var(--bg);
+  color: var(--fg);
   padding: 0.5rem 0.75rem;
-  border-radius: 6px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px var(--shadow-dark),
+              -4px -4px 8px var(--shadow-light);
 }
 
-.site-header { padding: 3rem 0 2rem; }
-.site-title { margin: 0 0 0.5rem; font-size: 2rem; display: flex; align-items: center; gap: 0.5rem; }
-.site-tagline { margin: 0; color: var(--muted); }
+.site-header { 
+  padding: 3rem 0 2rem;
+  background: var(--bg);
+}
+
+.site-title { 
+  margin: 0 0 0.5rem; 
+  font-size: 2rem; 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem;
+}
+
+.site-tagline { 
+  margin: 0; 
+  color: var(--muted);
+  font-weight: 500;
+}
 
 .site-logo {
   width: 40px;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 8px var(--shadow-dark),
+              -4px -4px 8px var(--shadow-light);
 }
 
-.brand-l { color: #ffffff; }
-.brand-apos { color: #ff8c00; }
-.brand-rest { color: #ffffff; }
+.brand-l { 
+  color: var(--fg);
+  font-weight: 600;
+}
+.brand-apos { 
+  color: #ff8c00; 
+  font-weight: 700;
+}
+.brand-rest { 
+  color: var(--fg);
+  font-weight: 600;
+}
 
 .site-main { padding: 1rem 0 4rem; }
 
@@ -61,19 +92,20 @@ body {
 .game-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.75rem;
 }
 
 @media (min-width: 480px) { .game-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 800px) { .game-grid { grid-template-columns: repeat(3, 1fr); } }
 
 .game-card {
-  border: 1px solid var(--card-border);
+  border: none;
   background: var(--card);
-  border-radius: 12px;
+  border-radius: 20px;
   overflow: hidden;
-  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  transition: all 160ms ease;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+              -8px -8px 16px var(--shadow-light);
 }
 
 .game-card a.card-link {
@@ -85,6 +117,8 @@ body {
 
 .game-card .media {
   aspect-ratio: 16 / 9; /* fixed media area ratio */
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
 }
 
 .game-card img {
@@ -96,29 +130,39 @@ body {
 
 .game-card a:focus-visible {
   outline: 3px solid var(--focus);
-  outline-offset: 2px;
+  outline-offset: 4px;
+  border-radius: 20px;
 }
 
 .game-card .content {
-  padding: 0.75rem 1rem 1rem;
+  padding: 1rem 1.25rem 1.25rem;
 }
 
 .game-card .title {
   margin: 0 0 0.25rem;
   font-size: 1rem;
+  font-weight: 700;
+  color: var(--fg);
 }
 
 .game-card .desc {
   margin: 0;
   font-size: 0.9375rem;
   color: var(--muted);
+  font-weight: 500;
 }
 
 .game-card:hover,
 .game-card:focus-within {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-  border-color: color-mix(in oklab, var(--card-border) 60%, white);
+  transform: translateY(-2px);
+  box-shadow: 12px 12px 24px var(--shadow-dark),
+              -12px -12px 24px var(--shadow-light);
+}
+
+.game-card:active {
+  box-shadow: inset 4px 4px 8px var(--shadow-inset-dark),
+              inset -4px -4px 8px var(--shadow-inset-light);
+  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
