@@ -15,6 +15,13 @@ window.gamesConfig = {
       description: "Balls fighting over territory. Forever!",
       imagePath: "assets/images/two-ball-breakout.jpg",
       imageAlt: "Screenshot of Two Ball Breakout gameplay"
+    },
+    {
+      route: "/SabeRL",
+      title: "SabeRL",
+      description: "Light saber with reinforcement learning",
+      imagePath: "assets/images/saberl.jpg",
+      imageAlt: "Screenshot of SaberL gameplay"
     }
   ]
 };
