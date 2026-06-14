@@ -22,6 +22,13 @@ window.gamesConfig = {
       description: "Light saber with reinforcement learning",
       imagePath: "assets/images/saberl.jpg",
       imageAlt: "Screenshot of SaberL gameplay"
+    },
+    {
+      route: "/music-graph",
+      title: "Music Graph",
+      description: "Wander a graph of chords and let it play",
+      imagePath: "assets/images/music-graph.jpg",
+      imageAlt: "Screenshot of Music Graph"
     }
   ]
 };
